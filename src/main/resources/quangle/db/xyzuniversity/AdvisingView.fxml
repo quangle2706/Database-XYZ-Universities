@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quangle.db.xyzuniversity.AdvisingViewController"
+          vgap="10" hgap="10" fx:id="root" alignment="center">
+
+    <Label text="Advisor ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ComboBox fx:id="advisorComboBox" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <items></items>
+    </ComboBox>
+
+    <Label text="Student ID" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <ComboBox fx:id="studentComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items></items>
+    </ComboBox>
+
+    <Button text="Connect" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#connectAdvisorToStudent"/>
+    <Button text="Back" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#backToLogin"/>
+
+</GridPane>

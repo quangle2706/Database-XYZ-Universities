@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quangle.db.xyzuniversity.CourseViewController"
+          vgap="10" hgap="10" fx:id="root" alignment="center">
+    <Label text="Course Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="courseNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Instructor ID" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ComboBox fx:id="instructorComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items></items>
+    </ComboBox>
+    <Label text="Start Date" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="End Date" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <DatePicker fx:id="endDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Day of Week" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="dayOfWeekField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label text="Start Time" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="startTimeField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Label text="End Time" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="endTimeField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Label text="Room Number" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <TextField fx:id="roomNumberField" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+    <Label text="Number Credits" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+    <Spinner fx:id="numberCreditSpinner" GridPane.columnIndex="1" GridPane.rowIndex="8" editable="true" min="0" max="6"/>
+    <Label text="Semester" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+    <TextField fx:id="semesterField" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+    <Button text="Add" GridPane.columnIndex="0" GridPane.rowIndex="10" onAction="#addCourse"/>
+    <Button text="Back" GridPane.columnIndex="4" GridPane.rowIndex="0" onAction="#backToLogin"/>
+
+    <TableView fx:id="courseTable" GridPane.columnIndex="0" GridPane.rowIndex="11" GridPane.columnSpan="3">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" prefWidth="50"/>
+            <TableColumn text="Course Name" fx:id="nameColumn" prefWidth="200"/>
+            <TableColumn text="Instructor ID" fx:id="instructorColumn" prefWidth="100"/>
+            <TableColumn text="Start Date" fx:id="startDateColumn" prefWidth="100"/>
+            <TableColumn text="End Date" fx:id="endDateColumn" prefWidth="100"/>
+            <TableColumn text="Schedule" fx:id="dayOfWeekColumn" prefWidth="100"/>
+            <TableColumn text="Start Time" fx:id="startTimeColumn" prefWidth="70"/>
+            <TableColumn text="End Time" fx:id="endTimeColumn" prefWidth="70"/>
+            <TableColumn text="Room Number" fx:id="roomNumberColumn" prefWidth="60"/>
+            <TableColumn text="Number Credits" fx:id="numberCreditColumn" prefWidth="50"/>
+            <TableColumn text="Semester" fx:id="semesterColumn" prefWidth="50"/>
+        </columns>
+    </TableView>
+</GridPane>

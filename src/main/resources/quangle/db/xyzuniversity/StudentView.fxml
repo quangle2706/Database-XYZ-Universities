@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="quangle.db.xyzuniversity.StudentViewController"
+      alignment="center"
+      spacing="10">
+
+    <GridPane alignment="center"
+              hgap="10"
+              vgap="15">
+
+        <Label text="Student ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Text fx:id="studentIdText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Text text="Quang Tuan" fx:id="firstNameText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Text fx:id="lastNameText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Text fx:id="addressText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Text fx:id="phoneNumberText" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Text fx:id="emailText" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label text="Date of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Text fx:id="dobText" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label text="Major:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Text fx:id="majorText" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+        <Label text="Your Advisor:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Text fx:id="advisorText" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    </GridPane>
+
+    <HBox alignment="center"
+          spacing="10">
+
+        <Button fx:id="updateButton" onAction="#updateInformation" text="Update Information" />
+        <Button fx:id="coursesButton" onAction="#manageYourCourses" text="Manage Your Courses" />
+        <Button fx:id="scheduleButton" onAction="#seeYourSchedule" text="See Your Schedule" />
+        <Button fx:id="logoutButton" onAction="#logOutYourAccount" text="Log Out" />
+
+    </HBox>
+
+</VBox>
+

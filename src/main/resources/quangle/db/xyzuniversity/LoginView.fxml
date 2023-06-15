@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="quangle.db.xyzuniversity.LoginViewController"
+            alignment="center" hgap="10" vgap="10"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label text="Login Form" style="-fx-font-size: 24;" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <HBox alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4" >
+        <Button text="Login" onAction="#handleLogin" defaultButton="true" />
+    </HBox>
+    <Label text="Don't have an account?" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <Button text="Register" onAction="#handleRegister" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <Label fx:id="messageLabel" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+
+    <Button text="PROFESSOR ADMINISTRATION" onAction="#openProfessorAccess" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+    <Button text="DEPARTMENT ADMINISTRATION" onAction="#openDepartmentAccess" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+    <Button text="COURSE ADMINISTRATION" onAction="#openCourseAccess" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <Button text="ADVISOR ADMINISTRATION" onAction="#openAdvisorAccess" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+    <Button text="ADVISING ADMINISTRATION" onAction="#openAdvisingAccess" defaultButton="false" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+
+</GridPane>

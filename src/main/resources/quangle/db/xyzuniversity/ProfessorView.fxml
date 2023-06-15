@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quangle.db.xyzuniversity.ProfessorViewController"
+          vgap="10" hgap="10" fx:id="root" alignment="center">
+    <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Address" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Phone Number" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label text="Department" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ComboBox fx:id="deptComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <items></items>
+    </ComboBox>
+
+    <Button text="Add" GridPane.columnIndex="0" GridPane.rowIndex="6" onAction="#addProfessor"/>
+    <Button text="Back" GridPane.columnIndex="4" GridPane.rowIndex="0" onAction="#backToLogin"/>
+
+    <TableView fx:id="professorTable" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="3">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" prefWidth="50"/>
+            <TableColumn text="First Name" fx:id="firstNameColumn" prefWidth="200"/>
+            <TableColumn text="Last Name" fx:id="lastNameColumn" prefWidth="200"/>
+            <TableColumn text="Address" fx:id="addressColumn" prefWidth="200"/>
+            <TableColumn text="Phone Number" fx:id="phoneNumberColumn" prefWidth="200"/>
+            <TableColumn text="Email" fx:id="emailColumn" prefWidth="200"/>
+            <TableColumn text="Department" fx:id="deptColumn" prefWidth="200"/>
+        </columns>
+    </TableView>
+</GridPane>

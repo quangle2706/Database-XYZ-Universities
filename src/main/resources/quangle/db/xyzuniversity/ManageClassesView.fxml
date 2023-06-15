@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quangle.db.xyzuniversity.ManageClassesViewController"
+          vgap="10" hgap="10" fx:id="root" alignment="center">
+
+    <Button text="Back" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#backToMainScene"/>
+
+    <Label text="Available courses for you to add" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ComboBox fx:id="availableCoursesComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Select available courses">
+        <items></items>
+    </ComboBox>
+    <Button text="ADD" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#addNewCourse"/>
+
+    <Label text="Your courses you want to drop" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="enrolledCoursesComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Select available courses">
+        <items></items>
+    </ComboBox>
+    <Button text="DROP" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#dropCourse"/>
+
+    <Label text="Here are available courses for you" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <ScrollPane prefHeight="200" fitToWidth="true" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="3">
+        <content>
+            <TableView fx:id="availableCourseTable" prefHeight="200">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn" prefWidth="50"/>
+                    <TableColumn text="Course Name" fx:id="nameColumn" prefWidth="200"/>
+                    <TableColumn text="Instructor ID" fx:id="instructorColumn" prefWidth="100"/>
+                    <TableColumn text="Start Date" fx:id="startDateColumn" prefWidth="100"/>
+                    <TableColumn text="End Date" fx:id="endDateColumn" prefWidth="100"/>
+                    <TableColumn text="Schedule" fx:id="dayOfWeekColumn" prefWidth="100"/>
+                    <TableColumn text="Start Time" fx:id="startTimeColumn" prefWidth="70"/>
+                    <TableColumn text="End Time" fx:id="endTimeColumn" prefWidth="70"/>
+                    <TableColumn text="Room Number" fx:id="roomNumberColumn" prefWidth="60"/>
+                    <TableColumn text="Number Credits" fx:id="numberCreditColumn" prefWidth="50"/>
+                    <TableColumn text="Semester" fx:id="semesterColumn" prefWidth="50"/>
+                </columns>
+            </TableView>
+        </content>
+    </ScrollPane>
+
+    <Label text="Here are your current courses" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ScrollPane prefHeight="200" fitToWidth="true" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="3">
+        <content>
+            <TableView fx:id="enrolledCourseTable" prefHeight="200">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumnEnrolled" prefWidth="50"/>
+                    <TableColumn text="Course Name" fx:id="nameColumnEnrolled" prefWidth="200"/>
+                    <TableColumn text="Instructor ID" fx:id="instructorColumnEnrolled" prefWidth="100"/>
+                    <TableColumn text="Start Date" fx:id="startDateColumnEnrolled" prefWidth="100"/>
+                    <TableColumn text="End Date" fx:id="endDateColumnEnrolled" prefWidth="100"/>
+                    <TableColumn text="Schedule" fx:id="dayOfWeekColumnEnrolled" prefWidth="100"/>
+                    <TableColumn text="Start Time" fx:id="startTimeColumnEnrolled" prefWidth="70"/>
+                    <TableColumn text="End Time" fx:id="endTimeColumnEnrolled" prefWidth="70"/>
+                    <TableColumn text="Room Number" fx:id="roomNumberColumnEnrolled" prefWidth="60"/>
+                    <TableColumn text="Number Credits" fx:id="numberCreditColumnEnrolled" prefWidth="50"/>
+                    <TableColumn text="Semester" fx:id="semesterColumnEnrolled" prefWidth="50"/>
+                </columns>
+            </TableView>
+        </content>
+    </ScrollPane>
+
+</GridPane>

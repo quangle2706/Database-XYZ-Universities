@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="quangle.db.xyzuniversity.DepartmentViewController"
+            vgap="10" hgap="10" fx:id="root" alignment="center">
+    <Label text="Add Department" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="departmentNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Button text="Add" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#addDepartment"/>
+    <Button text="Back" GridPane.columnIndex="4" GridPane.rowIndex="0" onAction="#backToLogin"/>
+
+    <TableView fx:id="departmentTable" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="3">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" prefWidth="50"/>
+            <TableColumn text="Name" fx:id="nameColumn" prefWidth="200"/>
+        </columns>
+    </TableView>
+</GridPane>

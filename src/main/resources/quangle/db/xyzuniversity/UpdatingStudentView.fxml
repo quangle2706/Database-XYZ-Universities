@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quangle.db.xyzuniversity.UpdatingStudentViewController"
+          vgap="10" hgap="10" fx:id="root" alignment="center">
+    <Label text="Student ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Text fx:id="studentIDText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Address" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Phone Number" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Label text="Date of Birth" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <DatePicker fx:id="dobDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Label text="Major" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <ComboBox fx:id="majorComboBox" GridPane.columnIndex="1" GridPane.rowIndex="7" promptText="Select your major">
+        <items>
+            <FXCollections fx:factory="observableArrayList" fx:id="defaultItems">
+                <String fx:value="Computer Science" />
+                <String fx:value="Physics" />
+                <String fx:value="Chemistry" />
+            </FXCollections>
+        </items>
+        <items>
+            <fx:reference source="defaultItems" />
+        </items>
+    </ComboBox>
+
+    <Button text="Update" GridPane.columnIndex="0" GridPane.rowIndex="8" onAction="#updateInformation"/>
+    <Button text="Back" GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#backToMainScene"/>
+</GridPane>
